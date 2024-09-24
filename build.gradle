@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group = 'me.ripwidnows.guilds'
+version = '1.0-SNAPSHOT'
+repositories {
+    mavenCentral()
+}
+allprojects {
+    compileJava.options.encoding = 'UTF-8'
+    apply plugin: 'java'
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/groups/public/"
+        }
+    }
+
+    dependencies {
+        compileOnly "org.projectlombok:lombok:1.18.22"
+        annotationProcessor("org.projectlombok:lombok:1.18.22")
+        testImplementation 'org.jetbrains:annotations:23.0.1'
+        compileOnly 'org.jetbrains:annotations:24.0.1'
+    }
+}
+
+

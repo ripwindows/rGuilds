@@ -1,0 +1,4 @@
+rootProject.name = 'rGuilds'
+include 'common'
+include 'proxy'
+
